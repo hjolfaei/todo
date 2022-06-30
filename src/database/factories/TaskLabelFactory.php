@@ -14,13 +14,14 @@ $factory->define(TaskLabel::class, function (Faker $faker) {
     $user = Auth::user();
     $tasks = Task::all()->where('user_id','==',$user->id);
     $labels = Label::all();
+    $taskLabels = TaskLabel::all();
 
     do{
         $taskId = $tasks->random()->id;
         $labelId = $labels->random()->id;
-        $duplicate = $labels->where('task_id','==' , $taskId)->where('label_id','==', $labelId);
+        $duplicate = $taskLabels->where('task_id','==' , $taskId)->where('label_id','==', $labelId);
     }
-    while (empty($duplicate));
+    while (sizeof($duplicate) != 0);
     return [
         'task_id' => $taskId,
         'label_id' => $labelId,
