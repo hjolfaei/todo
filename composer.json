@@ -1,0 +1,24 @@
+{
+    "name": "hjolfaei/todo",
+    "description": "This package provides you with a simple todo list",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hjolfaei\\Todo\\": "src/"
+
+        }
+    },
+    "authors": [
+        {
+            "name": "Hossein Jolfaei",
+            "email": "hosseinjolfaei@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hjolfaei\\Todo\\TodoServiceProvider"
+            ]
+        }
+    }
+}
