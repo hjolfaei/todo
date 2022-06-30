@@ -22,19 +22,19 @@ http://APP_URL/todo
 
 ``` bash
 #Fill test data:
-/todo/api/v1/fill
+/api/v1/todo/fill
 
 #All tasks:
-/todo/api/v1/tasks
+/api/v1/todo/tasks
 
 #All labels:
-/todo/api/v1/labels
+/api/v1/todo/labels
 
 #Special task:
-/todo/api/v1/tasks/task-id
+/api/v1/todo/tasks/task-id
 #methods: Info:GET Create:POST Update:UPDATE Delete:DELETE
 
 #Special label:<br>
-/todo/api/v1/labels/label-id
+/api/v1/todo/labels/label-id
 #methods: Info:GET Create:POST Update:UPDATE
 ```
